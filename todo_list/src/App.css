@@ -1,20 +1,27 @@
 h1 {
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
   }
 
   body {
-    background: grey
+    background: white;
   }
   #todo-list {
     width: 500px;
     margin: 60px auto;
   }
   form, .todo {
-    border: 1px solid rgb(15, 26, 61);
+    border: 1px solid white;
+    border-radius: 8px;
     padding: 10px 20px;
     margin-bottom: 10px;
+    background: rgb(190, 190, 190);
   }
   form {
     display: flex;
@@ -25,6 +32,9 @@ h1 {
     padding: 4px 8px;
     flex-grow: 1;
     margin-right: 16px;
+    border: 1px transparent;
+    border-radius: 8px;
+    background-color: white;
   }
   .todo {
     display: flex;
@@ -54,16 +64,24 @@ h1 {
     transform: scale(1.8) translateY(1px);
     margin: 0 16px 0 0;
     cursor: pointer;
+    border-radius: 8px;
   }
   .todo-text input {
     padding: 4px;
+    flex-grow: 1;
+    margin-right: 16px;
+    border: 1px transparent;
+    border-radius: 8px;
+    background-color: white;
   }
   .todo-text {
+    font-family: monospace;
     font-size: 24px;
     line-height: 24px;
-    margin-bottom: 1cm;
     display: flex;
     align-self: center;
+    margin-bottom: 10px;
+    word-break: break-all;
   }
   .todo-completed {
     display: flex;
@@ -75,6 +93,9 @@ h1 {
   }
 
   #completed {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
+  #todobutton {
+    width: 220px;
+  }
