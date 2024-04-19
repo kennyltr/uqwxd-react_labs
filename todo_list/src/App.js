@@ -70,12 +70,8 @@ const App = () => {
   
   // Counting completed tasks
   function countTasks() {
-    const completedtasks = [...todos].map((todo) => {
-        if (todo.completed === true) {
-            completedtasks+=1
-        }
-        return completedtasks;
-    });
+    let updatedTodos = [...todos].filter((todo) => todo.completed === true);
+    return updatedTodos.length;
   }
 
 
@@ -83,7 +79,8 @@ return(
     <div id="todo-list">
         <h1>TODO LIST</h1>
             <h2 onLoad={countTasks}>
-            {todos.length} things to do! You've done {completedtasks} things so far!</h2>
+            You've got {todos.length} things to do and completed {countTasks()} so far! Get on it :)
+            </h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" id='todoAdd'/>
                 <button type="submit">Add Todo</button>
